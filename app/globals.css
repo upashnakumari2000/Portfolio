@@ -1,26 +1,152 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --font-size: 16px;
+  --background: 254 249 245;
+  --foreground: 20 20 20;
+  --card: 255 255 255;
+  --card-foreground: 20 20 20;
+  --popover: 255 255 255;
+  --popover-foreground: 20 20 20;
+  --primary: 255 107 157;
+  --primary-foreground: 255 255 255;
+  --secondary: 242 242 245;
+  --secondary-foreground: 3 2 19;
+  --muted: 245 230 232;
+  --muted-foreground: 113 113 130;
+  --accent: 255 214 231;
+  --accent-foreground: 3 2 19;
+  --destructive: 212 24 61;
+  --destructive-foreground: 255 255 255;
+  --border: 255 107 157;
+  --input: 255 245 248;
+  --input-background: 255 245 248;
+  --switch-background: 203 206 212;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: 180 180 180;
+  --chart-1: 255 140 100;
+  --chart-2: 100 180 200;
+  --chart-3: 80 100 140;
+  --chart-4: 230 200 100;
+  --chart-5: 220 160 120;
+  --radius: 0.5rem;
+  --sidebar: 251 251 251;
+  --sidebar-foreground: 20 20 20;
+  --sidebar-primary: 3 2 19;
+  --sidebar-primary-foreground: 251 251 251;
+  --sidebar-accent: 247 247 247;
+  --sidebar-accent-foreground: 52 52 52;
+  --sidebar-border: 235 235 235;
+  --sidebar-ring: 180 180 180;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.dark {
+  --background: 26 26 46;
+  --foreground: 251 251 251;
+  --card: 22 33 62;
+  --card-foreground: 251 251 251;
+  --popover: 20 20 20;
+  --popover-foreground: 251 251 251;
+  --primary: 255 107 157;
+  --primary-foreground: 255 255 255;
+  --secondary: 68 68 68;
+  --secondary-foreground: 251 251 251;
+  --muted: 15 52 96;
+  --muted-foreground: 180 180 180;
+  --accent: 83 52 131;
+  --accent-foreground: 251 251 251;
+  --destructive: 101 24 40;
+  --destructive-foreground: 162 74 74;
+  --border: 255 107 157;
+  --input: 68 68 68;
+  --ring: 112 112 112;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: 124 93 255;
+  --chart-2: 177 213 150;
+  --chart-3: 220 160 120;
+  --chart-4: 160 100 200;
+  --chart-5: 164 100 90;
+  --sidebar: 52 52 52;
+  --sidebar-foreground: 251 251 251;
+  --sidebar-primary: 124 93 255;
+  --sidebar-primary-foreground: 251 251 251;
+  --sidebar-accent: 68 68 68;
+  --sidebar-accent-foreground: 251 251 251;
+  --sidebar-border: 68 68 68;
+  --sidebar-ring: 112 112 112;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  border-color: rgb(var(--border));
+  outline-color: rgb(var(--ring) / 0.5);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(var(--background));
+  color: rgb(var(--foreground));
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  font-size: var(--font-size);
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+html::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+body {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-medium);
+  line-height: 1.5;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-medium);
+  line-height: 1.5;
+}
+
+h3 {
+  font-size: 1.125rem;
+  font-weight: var(--font-weight-medium);
+  line-height: 1.5;
+}
+
+h4 {
+  font-size: 1rem;
+  font-weight: var(--font-weight-medium);
+  line-height: 1.5;
+}
+
+label {
+  font-size: 1rem;
+  font-weight: var(--font-weight-medium);
+  line-height: 1.5;
+}
+
+button {
+  font-size: 1rem;
+  font-weight: var(--font-weight-medium);
+  line-height: 1.5;
+}
+
+input {
+  font-size: 1rem;
+  font-weight: var(--font-weight-normal);
+  line-height: 1.5;
 }
