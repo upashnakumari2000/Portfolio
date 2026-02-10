@@ -1,10 +1,7 @@
 'use client'
-
-import { Sun, Moon } from "lucide-react";
-import { useTheme } from "./ThemeProvider";
+import { Heart } from 'lucide-react';
 
 export function Navbar() {
-  const { theme, toggleTheme } = useTheme();
 
   const scrollToSection = (id: string) => {
     const section = document.getElementById(id);
@@ -42,19 +39,13 @@ export function Navbar() {
               >
                 Contact
               </button>
+              <button
+                onClick={() => scrollToSection("hero")}
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <Heart></Heart>
+              </button>
             </div>
-
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-lg hover:bg-accent transition-colors"
-              aria-label="Toggle theme"
-            >
-              {theme === "light" ? (
-                <Moon className="w-5 h-5 text-muted-foreground hover:text-foreground" />
-              ) : (
-                <Sun className="w-5 h-5 text-muted-foreground hover:text-foreground" />
-              )}
-            </button>
           </div>
         </div>
       </div>
