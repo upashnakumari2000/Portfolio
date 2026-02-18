@@ -1,10 +1,14 @@
 'use client'
 import { useState } from "react";
 import { Send } from "lucide-react";
+import { CONTACT_EMAIL } from "@/constants";
+
+type FormStatus = "idle" | "sending" | "success" | "error";
 
 export function Contact() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
-  const [status, setStatus] = useState("");
+  const [status, setStatus] = useState<FormStatus>("idle");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
@@ -12,7 +16,8 @@ export function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setStatus("Sending...");
+    setStatus("sending");
+    setErrorMessage("");
 
     try {
       const res = await fetch("/api/contact", {
@@ -24,15 +29,24 @@ export function Contact() {
       const data = await res.json();
 
       if (res.ok) {
-        setStatus("Message sent! ✨");
+        setStatus("success");
         setFormData({ name: "", email: "", message: "" });
       } else {
-        setStatus(`Error: ${data.message}`);
+        setStatus("error");
+        setErrorMessage(data.message || "Something went wrong");
       }
     } catch (err) {
       console.error(err);
-      setStatus("Error sending message");
+      setStatus("error");
+      setErrorMessage("Could not reach the server. Please try again.");
     }
+  };
+
+  const buttonContent = {
+    idle: <><Send className="w-5 h-5"/></>,
+    sending: "Sending...",
+    success: "Message sent! Yay!!!",
+    error: "Try again",
   };
 
   return (
@@ -84,23 +98,19 @@ export function Contact() {
               />
             </div>
 
+            {status === "error" && (
+              <p className="text-red-500 text-sm">{errorMessage}</p>
+            )}
+
             <button
               type="submit"
-              disabled={status === "Sending..."}
+              disabled={status === "sending"}
               className="w-full bg-[#F0A0B5] text-white px-8 py-4 rounded-full
              hover:bg-[#E08FA3] transition-colors shadow-lg
              flex items-center justify-center gap-2
              disabled:opacity-70 disabled:cursor-not-allowed"
             >
-              {status === "Sending..." && "Sending..."}
-              {status === "Message sent! ✨" && "Message sent! ✨"}
-              {status.startsWith("Error") && status}
-              {status === "" && (
-                <>
-                  Send Message
-                  <Send className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-                </>
-              )}
+              {buttonContent[status]}
             </button>
           </form>
         </div>
@@ -108,7 +118,7 @@ export function Contact() {
         <div className="text-center mt-12">
           <p className="text-gray-600 mb-4">Or reach out directly:</p>
           <a href="mailto:upashnakumari2000@gmail.com" className="text-[#F0A0B5] hover:text-[#E08FA3] text-lg font-medium">
-            upashnakumari2000@gmail.com
+            {CONTACT_EMAIL}
           </a>
         </div>
       </div>

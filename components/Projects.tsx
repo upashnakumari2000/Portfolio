@@ -1,68 +1,32 @@
+'use client'
 import { ProjectCard } from "@/components/ProjectCard";
-
-interface Project {
-  id: number;
-  title: string;
-  description: string;
-  tags: string[];
-  link?: string;
-  github?: string;
-}
-
-const projects: Project[] = [
-  {
-    id: 1,
-    title: "one ✨",
-    description: "A something here",
-    tags: ["React","Tailwind"],
-    link: "#",
-    github: "#",
-  },
-  {
-    id: 2,
-    title: "two 💕",
-    description: "A something here",
-    tags: ["React"],
-    link: "#",
-    github: "#",
-  },
-  {
-    id: 3,
-    title: "three ✏️",
-    description: "A something here",
-    tags: ["React"],
-    link: "#",
-    github: "#",
-  },
-  {
-    id: 4,
-    title: "four 🎨",
-    description: "A something here",
-    tags: ["React"],
-    link: "#",
-    github: "#",
-  },
-  {
-    id: 5,
-    title: "five ☕",
-    description: "A something here",
-    tags: ["React"],
-    link: "#",
-    github: "#",
-  },
-  {
-    id: 6,
-    title: "six 🌟",
-    description: "A something here",
-    tags: ["React"],
-    link: "#",
-    github: "#",
-  },
-];
-
-const rotations = ["rotate-1", "-rotate-1", "rotate-2", "-rotate-2"];
+import { projects } from "@/data/projects";
+import { useEffect, useRef } from 'react';
 
 export function Projects() {
+  const wrapperRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    const observers: IntersectionObserver[] = [];
+
+    wrapperRefs.current.forEach((el) => {
+      if (!el) return;
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            el.style.opacity = "1";
+            el.style.transform = "translateY(0) scale(1)";
+          }
+        },
+        { threshold: 0.1 }
+      );
+      observer.observe(el);
+      observers.push(observer);
+    });
+
+    return () => observers.forEach((o) => o.disconnect());
+  }, []);
+
   return (
     <section id="projects" className="bg-[#F4E0E1] py-20">
       <div className="max-w-6xl mx-auto px-4">
@@ -75,17 +39,32 @@ export function Projects() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="flex flex-col">
           {projects.map((project, i) => (
-            <ProjectCard
+            <div
               key={project.id}
-              title={project.title}
-              description={project.description}
-              tags={project.tags}
-              link={project.link}
-              github={project.github}
-              rotation={rotations[i % rotations.length]}
-            />
+              className="sticky"
+              style={{ top: `${72 + i * 16}px` }}
+            >
+              <div
+                ref={(el) => { wrapperRefs.current[i] = el; }}
+                style={{
+                  opacity: 0,
+                  transform: "translateY(32px) scale(0.98)",
+                  transition: `opacity 0.5s ease ${i * 60}ms, transform 0.5s ease ${i * 60}ms`,
+                  marginBottom: "1rem",
+                }}
+              >
+                <ProjectCard
+                  title={project.title}
+                  description={project.description}
+                  tags={project.tags}
+                  image={project.image}
+                  link={project.link}
+                  github={project.github}
+                />
+              </div>
+            </div>
           ))}
         </div>
       </div>

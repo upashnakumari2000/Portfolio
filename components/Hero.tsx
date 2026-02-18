@@ -39,11 +39,11 @@ export function Hero() {
 
           <div className="max-w-xl mx-auto p-8 bg-purple-50 shadow-lg rounded-xl border border-purple-200">
             <h1 className="text-4xl md:text-5xl mb-6 leading-tight">
-              <span className="block text-[#F0A0B5]">building</span>
-              <span className="block text-[#97A53E]">impactful software</span>
-              <span className="block text-[#F0A0B5]">+ clean code for</span>
-              <span className="block text-gray-700">makers, creators,</span>
-              <span className="block text-[#D7DE8C]">& problem-solvers</span>
+              <span className="block text-[#F0A0B5]">full stack engineer</span>
+              <span className="block text-[#97A53E]">React · TypeScript</span>
+              <span className="block text-[#F0A0B5]">· Node.js</span>
+              <span className="block text-gray-700">building software</span>
+              <span className="block text-[#D7DE8C]">that actually ships</span>
             </h1>
           </div>
 

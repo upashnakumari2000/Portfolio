@@ -1,5 +1,6 @@
 import { Linkedin, Github, Mail } from 'lucide-react';
 import Image from 'next/image';
+import { SOCIAL_LINKS } from '@/constants';
 
 export function About() {
   return (
@@ -30,13 +31,27 @@ export function About() {
             </p>
             
             <div className="flex gap-6 pt-4">
-              <a href="#" className="text-[#F0A0B5] hover:scale-110 transition-transform">
+              <a 
+                href={SOCIAL_LINKS.linkedin}
+                target="blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="text-[#F0A0B5] hover:scale-110 transtion-transform"
+                >
                 <Linkedin className="w-6 h-6" />
               </a>
-              <a href="#" className="text-[#F0A0B5] hover:scale-110 transition-transform">
+              <a 
+                href={SOCIAL_LINKS.github}
+                target="blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                className="text-[#F0A0B5] hover:scale-110 transition-transform">
                 <Github className="w-6 h-6" />
               </a>
-              <a href="#" className="text-[#F0A0B5] hover:scale-110 transition-transform">
+              <a 
+                href={SOCIAL_LINKS.email}
+                aria-label="Email"
+                className="text-[#F0A0B5] hover:scale-110 transition-transform">
                 <Mail className="w-6 h-6" />
               </a>
             </div>
