@@ -54,7 +54,7 @@ export function Contact() {
       <div className="max-w-3xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl text-[#F0A0B5] mb-4">Let Me Help You!</h2>
-          <p className="text-gray-700 text-lg">Have something on your mind? I'd love to hear about it ✨</p>
+          <p className="text-gray-700 text-lg">Have something on your mind? I&apos;d love to hear about it ✨</p>
         </div>
 
         <div className="bg-white rounded-3xl p-8 md:p-12 shadow-xl">

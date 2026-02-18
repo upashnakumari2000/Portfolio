@@ -9,7 +9,7 @@ export function About() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <div className="inline-block">
-              <h2 className="text-4xl md:text-5xl text-[#F0A0B5] mb-2">I'm Upashna!</h2>
+              <h2 className="text-4xl md:text-5xl text-[#F0A0B5] mb-2">I&apos;m Upashna!</h2>
               <p className="text-sm text-gray-500 uppercase tracking-wide">THE PERSON FOR YOU</p>
             </div>
 
