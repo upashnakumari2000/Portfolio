@@ -1,7 +1,7 @@
 import { Sparkles, Palette, Computer } from "lucide-react"
+import { ScrollReveal } from "@/components/ScrollReveal";
 
 export function Hero() {
-
   return (
     <section id="hero" className="relative min-h-screen flex flex-col">
       <div className="absolute inset-0 -z-10">
@@ -37,6 +37,7 @@ export function Hero() {
             </div>
           </div>
 
+          <ScrollReveal>
           <div className="max-w-xl mx-auto p-8 bg-purple-50 shadow-lg rounded-xl border border-purple-200">
             <h1 className="text-4xl md:text-5xl mb-6 leading-tight">
               <span className="block text-[#F0A0B5]">full stack engineer</span>
@@ -46,7 +47,9 @@ export function Hero() {
               <span className="block text-[#D7DE8C]">that actually ships</span>
             </h1>
           </div>
+          </ScrollReveal>
 
+          <ScrollReveal>
           <div className="max-w-xs mx-auto mt-12 bg-[#FFF9B1] shadow-lg 
                 border border-yellow-200 rounded-sm 
                 -rotate-2 relative p-6">
@@ -60,6 +63,7 @@ export function Hero() {
               <span className="text-[#F0A0B5] font-medium">me</span>
             </p>
           </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>

@@ -1,11 +1,12 @@
 import { Linkedin, Github, Mail, FileText } from 'lucide-react';
 import { CONTACT_EMAIL, SOCIAL_LINKS } from '@/constants';
+import { ScrollReveal } from '@/components/ScrollReveal';
 
 export function Footer() {
   return (
     <footer className="bg-[#F0A0B5]/10 border-t border-[#F0A0B5]/20 py-10">
       <div className="max-w-3xl mx-auto px-4 flex flex-col items-center gap-6">
-
+        <ScrollReveal>
         <div className="flex items-center gap-6">
           <a
             href={SOCIAL_LINKS.linkedin}
@@ -42,7 +43,9 @@ export function Footer() {
             <FileText className="w-5 h-5" />
           </a>
         </div>
+        </ScrollReveal>
 
+        <ScrollReveal>
         <a
           href="/Upashna_Kumari_Resume.pdf"
           target="_blank"
@@ -51,10 +54,13 @@ export function Footer() {
         >
           View Resume ↗
         </a>
+        </ScrollReveal>
 
+        <ScrollReveal>
         <p className="text-xs text-gray-400">
           © {new Date().getFullYear()} Upashna Kumari. Built with Next.js & Tailwind CSS.
         </p>
+        </ScrollReveal>
       </div>
     </footer>
   );

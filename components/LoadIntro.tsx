@@ -18,7 +18,7 @@ export function LoadIntro() {
     <AnimatePresence>
       {isLoading ? (
         <motion.div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-[#FDF9FF]"
+          className="fixed inset-0 z-100 flex items-center justify-center bg-[#FDF9FF]"
           initial={{ opacity: 1 }}
           exit={{ opacity: 0, y: -60 }}
           transition={{ duration: 0.7, ease: "easeInOut" }}
@@ -42,7 +42,7 @@ export function LoadIntro() {
               Building ideas into products.
             </motion.h1>
 
-            <div className="h-[3px] w-full overflow-hidden rounded-full bg-[#D4E5F3]">
+            <div className="h-0.75 w-full overflow-hidden rounded-full bg-[#D4E5F3]">
               <motion.div
                 className="h-full rounded-full bg-[#F0A0B5]"
                 initial={{ x: "-100%" }}

@@ -1,12 +1,14 @@
 import { Linkedin, Github, Mail } from 'lucide-react';
 import Image from 'next/image';
 import { SOCIAL_LINKS } from '@/constants';
+import { ScrollReveal } from '@/components/ScrollReveal'
 
 export function About() {
   return (
     <section id="about" className="bg-white py-20">
       <div className="max-w-5xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <ScrollReveal delay={0.08}>
           <div className="space-y-6">
             <div className="inline-block">
               <h2 className="text-4xl md:text-5xl text-[#F0A0B5] mb-2">I&apos;m Upashna!</h2>
@@ -56,7 +58,9 @@ export function About() {
               </a>
             </div>
           </div>
+          </ScrollReveal>
 
+          <ScrollReveal delay={0.08}>
           <div className="relative">
             <div className="bg-[#F0A0B5] rounded-3xl p-8 shadow-xl">
               <Image
@@ -72,6 +76,7 @@ export function About() {
               </div>
             </div>
           </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>

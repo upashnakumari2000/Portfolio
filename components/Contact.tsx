@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Send } from "lucide-react";
 import { CONTACT_EMAIL } from "@/constants";
+import { ScrollReveal } from "@/components/ScrollReveal";
 
 type FormStatus = "idle" | "sending" | "success" | "error";
 
@@ -52,11 +53,14 @@ export function Contact() {
   return (
     <section id="contact" className="bg-linear-to-b from-[#D7DE8C]/20 to-[#F0A0B5]/20 py-20">
       <div className="max-w-3xl mx-auto px-4">
+        <ScrollReveal>
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl text-[#F0A0B5] mb-4">Let Me Help You!</h2>
           <p className="text-gray-700 text-lg">Have something on your mind? I&apos;d love to hear about it ✨</p>
         </div>
+        </ScrollReveal>
 
+        <ScrollReveal>
         <div className="bg-white rounded-3xl p-8 md:p-12 shadow-xl">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
@@ -114,13 +118,16 @@ export function Contact() {
             </button>
           </form>
         </div>
+        </ScrollReveal>
 
+        <ScrollReveal>
         <div className="text-center mt-12">
           <p className="text-gray-600 mb-4">Or reach out directly:</p>
           <a href="mailto:upashnakumari2000@gmail.com" className="text-[#F0A0B5] hover:text-[#E08FA3] text-lg font-medium">
             {CONTACT_EMAIL}
           </a>
         </div>
+        </ScrollReveal>
       </div>
     </section>
   );
