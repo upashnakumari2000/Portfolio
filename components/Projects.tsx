@@ -5,7 +5,7 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 
 export function Projects() {
   return (
-    <section id="projects" className="bg-[#F4E0E1] py-20">
+    <section id="projects" className="bg-[#F4E0E1] py-16">
       <div className="mx-auto w-full max-w-6xl px-4">
         <ScrollReveal>
           <div className="mb-12 text-center">
@@ -17,7 +17,7 @@ export function Projects() {
           </div>
         </ScrollReveal>
 
-<div className="grid gap-6 md:grid-cols-2">
+<div className="grid gap-6 md:grid-cols-3">
           {projects.map((project, index) => (
             <ScrollReveal key={project.id} delay={0.04 * index}>
               <ProjectCard

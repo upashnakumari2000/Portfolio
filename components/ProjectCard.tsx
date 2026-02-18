@@ -19,8 +19,8 @@ export function ProjectCard({
   github,
 }: ProjectCardProps) {
   return (
-    <article className="group overflow-hidden rounded-3xl border border-[#F0A0B5]/20 bg-white shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-      <div className="relative h-52 w-full bg-[#D4E5F3]/35">
+    <article className="group flex h-full flex-col overflow-hidden rounded-3xl border border-[#F0A0B5]/20 bg-white shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+      <div className="relative h-44 w-full bg-[#D4E5F3]/35">
         {image ? (
           <NextImage src={image} alt={title} fill className="object-cover" />
         ) : (
@@ -31,10 +31,10 @@ export function ProjectCard({
         )}
       </div>
 
-      <div className="space-y-4 p-5">
+      <div className="flex flex-1 flex-col space-y-3 p-4">
         <div>
           <h3 className="text-2xl text-gray-800">{title}</h3>
-          <p className="mt-2 text-sm leading-relaxed text-gray-600">{description}</p>
+          <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-gray-600">{description}</p>
         </div>
 
         <div className="flex flex-wrap gap-2">
@@ -45,7 +45,7 @@ export function ProjectCard({
           ))}
         </div>
 
-        <div className="flex items-center gap-4 pt-1">
+        <div className="mt-auto flex items-center gap-4 pt-1">
           {link && (
             <a
               href={link}
