@@ -31,19 +31,18 @@ export function Hero() {
           </ScrollReveal>
 
           <ScrollReveal delay={0.05}>
-            <h1 className="mt-6 text-4xl font-semibold leading-tight md:text-6xl">
-              <span className="block text-gray-800">Hi, I&apos;m Upashna.</span>
-              <span className="block text-[#F0A0B5]">Full-stack engineer</span>
-              <span className="block text-[#97A53E]">who designs for outcomes.</span>
-            </h1>
-          </ScrollReveal>
-
-          <ScrollReveal delay={0.1}>
-            <p className="mx-auto mt-6 max-w-2xl text-sm leading-relaxed text-gray-700 md:mx-0 md:text-base">
-              I build reliable React + TypeScript + Node.js products that are fast, intuitive,
-              and genuinely enjoyable to use. I care about conversion-focused UX, scalable
-              architecture, and shipping work that helps teams move confidently.
-            </p>
+            <div className="mx-auto mt-6 max-w-2xl rounded-3xl border border-white/80 bg-white/78 p-5 shadow-xl backdrop-blur-sm md:mx-0 md:p-7">
+              <h1 className="text-4xl font-semibold leading-tight md:text-6xl">
+                <span className="block text-gray-800">Hi, I&apos;m Upashna.</span>
+                <span className="block text-[#F0A0B5]">Full-stack engineer</span>
+                <span className="block text-[#97A53E]">who designs for outcomes.</span>
+              </h1>
+            <p className="mt-5 text-sm leading-relaxed text-gray-700 md:text-base">
+                I build reliable React + TypeScript + Node.js products that are fast, intuitive,
+                and genuinely enjoyable to use. I care about conversion-focused UX, scalable
+                architecture, and shipping work that helps teams move confidently.
+              </p>
+            </div>
           </ScrollReveal>
 
           <ScrollReveal delay={0.14}>

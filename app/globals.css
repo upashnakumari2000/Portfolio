@@ -167,3 +167,48 @@
   animation-iteration-count: infinite;
   will-change: transform;
 }
+
+@keyframes hero-wave-float {
+  0% {
+    background-position: 0 50%, 0 50%;
+    transform: translate3d(0, 0, 0) scale(1.02);
+  }
+  25% {
+    background-position: 18px 47%, -14px 54%;
+    transform: translate3d(0, -8px, 0) scale(1.03);
+  }
+  50% {
+    background-position: 36px 52%, -26px 46%;
+    transform: translate3d(0, 6px, 0) scale(1.015);
+  }
+  75% {
+    background-position: 20px 55%, -12px 44%;
+    transform: translate3d(0, -6px, 0) scale(1.025);
+  }
+  100% {
+    background-position: 0 50%, 0 50%;
+    transform: translate3d(0, 0, 0) scale(1.02);
+  }
+}
+
+.hero-wave-bg {
+  background-image:
+    radial-gradient(120% 90% at 20% 100%, rgba(212, 229, 243, 0.55) 0%, rgba(212, 229, 243, 0) 62%),
+    radial-gradient(120% 90% at 80% 0%, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 62%),
+    repeating-linear-gradient(
+      90deg,
+      #d4e5f3 0,
+      #d4e5f3 40px,
+      #ffffff 40px,
+      #ffffff 80px
+    );
+  background-size: 140% 140%, 140% 140%, 80px 100%;
+  background-repeat: no-repeat, no-repeat, repeat;
+  animation: hero-wave-float 10s ease-in-out infinite;
+  transform-origin: center;
+  will-change: transform, background-position;
+}
+
+.hero-wave-bg-delay {
+  animation-delay: -5s;
+}
