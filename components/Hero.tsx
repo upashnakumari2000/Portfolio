@@ -122,13 +122,6 @@ export function Hero() {
                 </p>
               </div>
               <div className="mt-4 border-t border-gray-100 pt-4">
-                <a
-                  href="#contact"
-                  className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#F0A0B5]/10 px-4 py-2.5 text-xs font-medium text-[#F0A0B5] transition-colors hover:bg-[#F0A0B5]/20"
-                >
-                  Get in touch
-                  <ArrowRight className="h-3.5 w-3.5" />
-                </a>
               </div>
             </div>
           </ScrollReveal>
