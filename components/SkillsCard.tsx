@@ -37,7 +37,7 @@ export function SkillsCard() {
   return (
     <div
       ref={ref}
-      className="w-full md:w-72 rounded-3xl border border-white/60 bg-white/80 p-5 shadow-2xl backdrop-blur-sm"
+      className="w-full md:w-78 rounded-3xl border border-white/60 bg-white/80 p-5 shadow-2xl backdrop-blur-sm"
     >
       <div className="flex items-center justify-between mb-4">
         <p className="text-[10px] uppercase tracking-[0.22em] text-gray-500 font-medium">

@@ -109,7 +109,7 @@ export function Hero() {
         <div className="flex flex-col gap-4 md:self-start md:sticky md:top-24">
 
           <ScrollReveal delay={0.08}>
-            <div className="w-full md:w-72 relative overflow-hidden rounded-3xl border border-white/60 bg-white/80 p-5 shadow-2xl backdrop-blur-sm">
+            <div className="w-full md:w-78 relative overflow-hidden rounded-3xl border border-white/60 bg-white/80 p-5 shadow-2xl backdrop-blur-sm">
               <div className="inline-flex rounded-full border border-[#F0A0B5]/40 bg-white px-3 py-1 text-[10px] font-medium uppercase tracking-[0.2em] text-[#F0A0B5]">
                 ● Available
               </div>
