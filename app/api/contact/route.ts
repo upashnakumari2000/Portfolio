@@ -1,4 +1,3 @@
-import { get } from "http";
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 

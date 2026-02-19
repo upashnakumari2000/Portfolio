@@ -8,9 +8,9 @@ export function About() {
     <section id="about" className="bg-white py-20">
       <div className="mx-auto grid max-w-6xl gap-12 px-4 md:grid-cols-[0.95fr_1.05fr] md:items-center">
         <ScrollReveal>
-          <div className="relative mx-auto w-full max-w-md overflow-hidden rounded-[2rem] border border-[#F0A0B5]/20 bg-[#F4E0E1]/35 p-5">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-white/80">
-              <Image src="/me.png" alt="Upashna Kumari" fill className="object-cover" />
+          <div className="relative mx-auto w-full max-w-md overflow-hidden rounded-4xl border border-[#F0A0B5]/20 bg-[#F4E0E1]/35 p-5">
+            <div className="relative aspect-4/5 overflow-hidden rounded-3xl border border-white/80">
+              <Image src="/casual.jpg" alt="Upashna Kumari" fill className="object-cover" />
             </div>
             <div className="mt-4 rounded-2xl bg-white/90 p-4 text-sm text-gray-700">
               <p className="inline-flex items-center gap-2 text-[#97A53E]">
