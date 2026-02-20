@@ -46,7 +46,7 @@ export function Contact() {
   const buttonContent = {
     idle: "Send message",
     sending: "Sending...",
-    success: "Message sent! Yay!!!",
+    success: "Message sent!",
     error: "Try again",
   };
 

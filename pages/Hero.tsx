@@ -1,14 +1,5 @@
-import {
-  ArrowRight,
-  Code2,
-  Layers,
-  Rocket,
-  Sparkles,
-  Stars,
-  Wrench,
-} from "lucide-react";
+import { ArrowRight,Rocket, Sparkles, Stars } from "lucide-react";
 import { ScrollReveal } from "@/components/ScrollReveal";
-import { SkillsCard } from "@/components/SkillsCard";
 
 export function Hero() {
   return (
@@ -68,68 +59,9 @@ export function Hero() {
               </a>
             </div>
           </ScrollReveal>
-
-          <ScrollReveal delay={0.18}>
-            <div className="grid grid-cols-1 gap-3 min-[520px]:grid-cols-3">
-
-              <div className="min-w-0 rounded-2xl border border-[#F0A0B5]/30 bg-white/85 p-4 text-left shadow-sm backdrop-blur-sm">
-                <div className="flex items-center gap-2 text-[#F0A0B5]">
-                  <Code2 className="h-4 w-4 shrink-0" />
-                  <p className="text-xs uppercase tracking-[0.2em]">Languages</p>
-                </div>
-                <p className="mt-2 wrap-break-wordword text-sm text-gray-700">
-                  TypeScript · Python · Java · SQL · Swift · HTML/CSS
-                </p>
-              </div>
-
-              <div className="min-w-0 rounded-2xl border border-[#97A53E]/30 bg-white/85 p-4 text-left shadow-sm backdrop-blur-sm">
-                <div className="flex items-center gap-2 text-[#97A53E]">
-                  <Layers className="h-4 w-4 shrink-0" />
-                  <p className="text-xs uppercase tracking-[0.2em]">Frameworks</p>
-                </div>
-                <p className="mt-2 wrap-break-word text-sm text-gray-700">
-                  React · Next.js · Node.js · Express · Tailwind · REST APIs
-                </p>
-              </div>
-
-              <div className="min-w-0 rounded-2xl border border-[#D7DE8C]/70 bg-white/85 p-4 text-left shadow-sm backdrop-blur-sm">
-                <div className="flex items-center gap-2 text-[#97A53E]">
-                  <Wrench className="h-4 w-4 shrink-0" />
-                  <p className="text-xs uppercase tracking-[0.2em]">Tools & Cloud</p>
-                </div>
-                <p className="mt-2 wrap-break-word text-sm text-gray-700">
-                  AWS · Docker · Git · Firebase · PostgreSQL · MongoDB
-                </p>
-              </div>
-
-            </div>
-          </ScrollReveal>
         </div>
 
         <div className="flex flex-col gap-4 md:self-start md:sticky md:top-24">
-
-          <ScrollReveal delay={0.08}>
-            <div className="w-full md:w-78 relative overflow-hidden rounded-3xl border border-white/60 bg-white/80 p-5 shadow-2xl backdrop-blur-sm">
-              <div className="inline-flex rounded-full border border-[#F0A0B5]/40 bg-white px-3 py-1 text-[10px] font-medium uppercase tracking-[0.2em] text-[#F0A0B5]">
-                ● Available
-              </div>
-              <div className="mt-4 rounded-2xl bg-[#FFF9B1]/70 p-4 text-sm leading-relaxed text-gray-700">
-                <p className="font-semibold text-[#97A53E]">Hiring note</p>
-                <p className="mt-1">
-                  Looking for a developer who can own both product polish and
-                  technical depth? I can help your team ship customer-facing
-                  features faster.
-                </p>
-              </div>
-              <div className="mt-4 border-t border-gray-100 pt-4">
-              </div>
-            </div>
-          </ScrollReveal>
-
-          <ScrollReveal delay={0.22}>
-            <SkillsCard />
-          </ScrollReveal>
-
         </div>
       </div>
     </section>
