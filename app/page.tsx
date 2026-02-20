@@ -1,13 +1,13 @@
 import { Navbar } from "@/components/Navbar";
-import { Hero } from "@/pages/Hero";
-import { Projects } from "@/pages/Projects";
-import { About } from "@/pages/About";
-import { Contact } from "@/pages/Contact";
+import { Hero } from "@/components/Hero";
+import { Projects } from "@/components/Projects";
+import { About } from "@/components/About";
+import { Contact } from "@/components/Contact";
 import { WaveTransition } from "@/components/WaveTransition";
 import { TransitionLast } from "@/components/TransitionLast";
-import { Footer } from "@/pages/Footer";
+import { Footer } from "@/components/Footer";
 import { Marquee } from "@/components/Marquee";
-import { LoadIntro } from "@/pages/LoadIntro";
+import { LoadIntro } from "@/components/LoadIntro";
 
 export default function Page() {
   return (
